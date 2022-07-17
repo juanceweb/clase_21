@@ -1,0 +1,34 @@
+{
+  "name": "entrega_13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "8080": "pm2 start ./src/server.js --name='8080' --watch -- 8080",
+    "8085": "pm2 start ./src/server.js --name='8085' --watch -i max -- 8085",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "file": "nodemon --inspect --ignore 'productos.json' ./src/server.js DEV file",
+    "mongo": "nodemon --inspect ./src/server.js DEV mongo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "minimist": "^1.2.6",
+    "moongose": "^1.0.0",
+    "nodemailer": "^6.7.5",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0",
+    "uuidv4": "^6.2.13",
+    "winston": "^3.7.2"
+  }
+}
